@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en" data-ng-app="messageClient">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Message Client</title>
+
+    <script src="angular.min.js"></script>
+
+    <script src="application.js"></script>
+    <script src="controllers.js"></script>
+</head>
+
+<body>
+    <div ng-controller="listCtrl">
+        <span ng-repeat="conversation in conversations" ng-click="chooseConversation(conversation.convo_id)">
+            {{conversation.convo_id}}
+        </span>
+    </div>
+</body>
+</html>
