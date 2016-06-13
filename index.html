@@ -9,16 +9,16 @@
     <script src="angular.min.js"></script>
 
     <script src="application.js"></script>
-    <script src="controllers.js"></script>
-    <script src="services.js"></script>
 </head>
 
 <body>
     <div ng-controller="listCtrl">
         <span ng-repeat="conversation in conversations">
-            <button ng-click="setConversation(conversation.conv_id)">{{conversation.conv_id}}</button>
+            <button ng-click="setConv(conversation.conv_id)">{{conversation.conv_id}}</button>
         </span>
         <div>{{conv_display}}</div>
     </div>
+	<div>
+	</div>
 </body>
 </html>
