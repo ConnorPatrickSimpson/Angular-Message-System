@@ -15,6 +15,12 @@ client.controller('listCtrl', ['$scope', 'conversationService',
         };
 	}
 ]);
+
+client.controller('convCtrl', ['$scope, 'conversationService',
+    function ($scope, conversationService) {
+		
+	}
+]);
 	
 client.factory('conversationService',
     function() {

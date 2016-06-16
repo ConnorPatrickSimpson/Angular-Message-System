@@ -16,9 +16,8 @@
         <span ng-repeat="conversation in conversations">
             <button ng-click="setConv(conversation.conv_id)">{{conversation.conv_id}}</button>
         </span>
-        <div>{{conv_display}}</div>
     </div>
-	<div>
+	<div ng-controller="convCtrl">
 	</div>
 </body>
 </html>
