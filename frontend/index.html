@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" data-ng-app="messageClient">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Message Client</title>
+
+    <script src="angular.min.js"></script>
+
+    <script src="application.js"></script>
+</head>
+
+<body>
+    <div ng-controller="listCtrl">
+        <span ng-repeat="conversation in conversations">
+            <button ng-click="setConv(conversation.conv_id)">{{conversation.conv_id}}</button>
+        </span>
+		<div>Current Conversation: {{conv_display}}</div
+    </div>
+	<div ng-controller="convCtrl">
+	    <div ng-repeat="message in messages">
+		    {{message.mess_user}} : {{message.mess_content}}
+		</div>
+		<div>
+		    <input type="text" ng-model="mess_submit"/>
+			<button type="button" ng-click="submitMess()">Submit</button>
+		</div>
+	</div>
+</body>
+</html>
